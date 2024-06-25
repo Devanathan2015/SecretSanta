@@ -1,0 +1,49 @@
+﻿<Properties StartupConfiguration="{549685F9-21B9-4815-ABC3-A25084E99568}|Default">
+  <MonoDevelop.Ide.ItemProperties.SecretSanta PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="SecretSanta/Implementations/CsvUserReader.cs">
+    <Files>
+      <File FileName="SecretSanta/Program.cs" Line="8" Column="26" />
+      <File FileName="SecretSanta/Models/User.cs" />
+      <File FileName="SecretSanta/Models/Assignment.cs" />
+      <File FileName="SecretSanta/Interface/IUserReader.cs" Line="9" Column="20" />
+      <File FileName="SecretSanta/Interface/IAssignmentGenerator.cs" />
+      <File FileName="SecretSanta/Interface/IAssignmentPrinter.cs" />
+      <File FileName="SecretSanta/Interface/IAssignmentSaver.cs" />
+      <File FileName="SecretSanta/Implementations/CsvUserReader.cs" Line="46" Column="14" />
+      <File FileName="SecretSanta/Implementations/SecretSantaAssignmentGenerator.cs" Line="12" Column="10" />
+      <File FileName="SecretSanta/Implementations/ConsoleAssignmentPrinter.cs" />
+      <File FileName="SecretSanta/Implementations/CsvAssignmentSaver.cs" />
+      <File FileName="SecreSantaTests/UnitTest1.cs" Line="46" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="SecretSanta" expanded="True">
+            <Node name="SecreSantaTests" expanded="True" />
+            <Node name="SecretSanta" expanded="True">
+              <Node name="Implementations" expanded="True">
+                <Node name="CsvUserReader.cs" selected="True" />
+              </Node>
+              <Node name="Interface" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="SecretSanta" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ambin03979/Projects/SecretSanta/SecreSantaTests/SecretSantaTests.cs" relfile="SecreSantaTests/SecretSantaTests.cs" line="46" column="1" />
+      <Breakpoint file="/Users/ambin03979/Projects/SecretSanta/SecretSanta/Implementations/CsvUserReader.cs" relfile="SecretSanta/Implementations/CsvUserReader.cs" line="16" column="1" />
+      <Breakpoint file="/Users/ambin03979/Projects/SecretSanta/SecretSanta/Implementations/CsvUserReader.cs" relfile="SecretSanta/Implementations/CsvUserReader.cs" line="48" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
