@@ -13,6 +13,7 @@ namespace SecreSantaTests
         [Fact]
         public void ReadUsers_ValidFile_ReturnsUsers()
         {
+            // Create temporary test CSV file
             var filePath = "test_users.csv";
             File.WriteAllLines(filePath, new[]
             {
@@ -24,8 +25,11 @@ namespace SecreSantaTests
 
             IUserReader userReader = new CsvUserReader();
             var users = userReader.ReadUsers(filePath);
+
+            // Assert that 3 users were read
             Assert.Equal(3, users.Count);
 
+            // Cleanup
             File.Delete(filePath);
         }
 
@@ -39,18 +43,21 @@ namespace SecreSantaTests
         [Fact]
         public void ReadUsers_EmptyFile_ThrowsInvalidDataException()
         {
+            // Create an empty temporary test CSV file
             var filePath = "empty.csv";
             File.WriteAllText(filePath, "");
 
             IUserReader userReader = new CsvUserReader();
             Assert.Throws<InvalidDataException>(() => userReader.ReadUsers(filePath));
 
+            // Cleanup
             File.Delete(filePath);
         }
 
         [Fact]
         public void ReadUsers_MalformedFile_ThrowsInvalidDataException()
         {
+            // Create a malformed test CSV file
             var filePath = "malformed.csv";
             File.WriteAllLines(filePath, new[]
             {
@@ -62,6 +69,7 @@ namespace SecreSantaTests
             IUserReader userReader = new CsvUserReader();
             Assert.Throws<InvalidDataException>(() => userReader.ReadUsers(filePath));
 
+            // Cleanup
             File.Delete(filePath);
         }
 
@@ -77,11 +85,14 @@ namespace SecreSantaTests
 
             IAssignmentGenerator assignmentGenerator = new SecretSantaAssignmentGenerator();
             var assignments = assignmentGenerator.GenerateAssignments(users);
+
+            // Assert that 3 assignments were generated
             Assert.Equal(3, assignments.Count);
 
             var givers = new HashSet<int>();
             var receivers = new HashSet<int>();
 
+            // Ensure no one is assigned to themeselves and all users participate
             foreach (var assignment in assignments)
             {
                 Assert.NotEqual(assignment.Giver.Id, assignment.Receiver.Id);
@@ -105,7 +116,5 @@ namespace SecreSantaTests
             IAssignmentGenerator assignmentGenerator = new SecretSantaAssignmentGenerator();
             Assert.Throws<InvalidOperationException>(() => assignmentGenerator.GenerateAssignments(users));
         }
-
-
     }
 }

@@ -13,6 +13,7 @@ namespace SecretSanta.Implementations
         {
             var users = new List<User>();
 
+            // Check if the file exists.
             if (!File.Exists(filePath))
             {
                 throw new FileNotFoundException($"The file {filePath} does not exist.");
@@ -20,6 +21,7 @@ namespace SecretSanta.Implementations
 
             using (var reader = new StreamReader(filePath))
             {
+                // Read the header line.
                 string headerLine = reader.ReadLine();
                 if (string.IsNullOrEmpty(headerLine))
                 {

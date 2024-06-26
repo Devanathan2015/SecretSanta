@@ -15,6 +15,7 @@ namespace SecretSanta.Implementations
                 throw new InvalidOperationException("There must be at least 3 users to perform a Secret Santa.");
             }
 
+            // Shuffle users to ensure random assignments
             List<User> shuffledUsers = users.OrderBy(u => Guid.NewGuid()).ToList();
             List<Assignment> assignments = new List<Assignment>();
 
